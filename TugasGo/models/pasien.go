@@ -1,7 +1,9 @@
 package models
 
+import "gorm.io/gorm"
+
 type Pasien struct {
-	ID           int    `json:"id" gorm:"primaryKey"`
+	gorm.Model          // Ini termasuk ID, CreatedAt, UpdatedAt, DeletedAt secara default
 	Nama         string `json:"nama"`
 	Alamat       string `json:"alamat"`
 	TanggalLahir string `json:"tanggal_lahir"`
